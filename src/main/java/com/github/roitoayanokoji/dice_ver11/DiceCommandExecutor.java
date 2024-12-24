@@ -47,7 +47,7 @@ public class DiceCommandExecutor implements CommandExecutor {
             //プレイヤーへのメッセージ
             player.sendMessage(pl + "結果 : " + random);
 
-            //broadcast
+            //サーバー全体へのメッセージ
             Component broadcastMessage = Component.text(resultMessage);
             plugin.getServer().sendMessage(broadcastMessage);
             return true;
