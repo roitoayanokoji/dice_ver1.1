@@ -1,10 +1,12 @@
 package com.github.roitoayanokoji.dice_ver11;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.awt.*;
 import java.util.Random;
 
 public class DiceCommandExecutor implements CommandExecutor {
@@ -39,14 +41,15 @@ public class DiceCommandExecutor implements CommandExecutor {
             }
             //ダイスの処理
             int random = new Random().nextInt(sides) + 1;
-            String dicemessage = player.getName() + "が" + sides + "面ダイスを振って" + random + "が出た";
+            String resultMessage = String.format("%sが%d面ダイスを振って%dが出た", player.getName(), sides, random);
             String pl = "[Dice]";
 
             //プレイヤーへのメッセージ
             player.sendMessage(pl + "結果 : " + random);
 
             //broadcast
-            plugin.getServer().broadcast(pl +dicemessage,"");
+            Component broadcastMessage = Component.text(resultMessage);
+            plugin.getServer().sendMessage(broadcastMessage);
             return true;
         }
         return false;

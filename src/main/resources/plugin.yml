@@ -1,4 +1,4 @@
-wname: dice_ver1.1
+name: dice_ver1.1
 version: '1.0-SNAPSHOT'
 main: com.github.roitoayanokoji.dice_ver11.Dice_ver11
 api-version: '1.20'
