@@ -27,6 +27,7 @@ public class DiceCommandExecutor implements CommandExecutor {
 
             int sides = 6;
             //ダイス面の初期値
+            /* /dice の場合6面ダイスを振る */
             if (args.length > 0){
                 try {
                     sides = Integer.parseInt(args[0]);
