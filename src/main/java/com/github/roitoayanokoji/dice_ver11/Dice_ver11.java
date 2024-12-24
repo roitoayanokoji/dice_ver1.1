@@ -9,7 +9,7 @@ public final class Dice_ver11 extends JavaPlugin {
         // Plugin startup logic
         getLogger().info("OnEnable");
 
-        //
+        //DiceCommandExecutorで処理
         getCommand("dice").setExecutor(new DiceCommandExecutor(this));
 
     }
